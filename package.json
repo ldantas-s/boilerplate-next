@@ -8,6 +8,8 @@
     "start": "next start",
     "lint:pre-commit": "eslint -c ./.eslintrc.json $(git diff --cached --name-only --diff-filter=AM | grep  -E \"(.js$|.ts$)\") --cache --cache-location node_modules/.cache/eslint",
     "prepare": "husky install",
+    "test": "jest",
+    "test:watch": "jest --watch",
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
@@ -26,8 +28,12 @@
     "react-dom": "17.0.2"
   },
   "devDependencies": {
+    "@babel/core": "^7.15.0",
     "@commitlint/cli": "^13.1.0",
     "@commitlint/config-conventional": "^13.1.0",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^12.0.0",
+    "babel-loader": "^8.2.2",
     "eslint": "7.31.0",
     "eslint-config-next": "11.0.1",
     "eslint-config-prettier": "^8.3.0",
@@ -35,6 +41,7 @@
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-react-hooks": "^4.2.0",
     "husky": "^7.0.0",
+    "jest": "^27.0.6",
     "lint-staged": "^11.1.1",
     "prettier": "2.3.2"
   }
