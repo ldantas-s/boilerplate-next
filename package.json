@@ -1,10 +1,10 @@
 {
-  "name": "boilerplate_full",
+  "name": "boilerplate_next",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "NODE_ENV=production next build",
     "start": "next start",
     "lint:pre-commit": "eslint -c ./.eslintrc.json $(git diff --cached --name-only --diff-filter=AM | grep  -E \"(.js$|.ts$)\") --cache --cache-location node_modules/.cache/eslint",
     "prepare": "husky install",
@@ -12,6 +12,7 @@
     "test:watch": "jest --watch",
     "storybook": "start-storybook -s ./public -p 6006",
     "build-storybook": "build-storybook"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
@@ -26,6 +27,7 @@
   },
   "dependencies": {
     "next": "11.0.1",
+    "next-pwa": "^5.3.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "styled-components": "^5.3.0"
