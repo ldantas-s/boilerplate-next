@@ -7,7 +7,7 @@ import Button from '.'
 describe('<Button />', () => {
   it('should', () => {
     const { getByText } = render(<Button>Ooi</Button>)
-    console.log('')
+
     expect(getByText('Ooi')).toBeInTheDocument()
   })
 })
